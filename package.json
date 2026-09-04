@@ -1,34 +1,24 @@
 {
-  "name": "react-native-starter-builder-project",
+  "name": "listagem-usuarios",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "description": "Aplicacao React para listagem de usuarios com Parcel.",
   "scripts": {
-    "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
-    "web": "expo start --web"
-    
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\""
   },
   "dependencies": {
-    "expo": "~54.0.34",
-    "expo-status-bar": "~3.0.9",
-    "react": "19.1.0",
-    "react-dom": "^19.1.0",
-    "react-native": "0.81.5",
-    "react-native-web": "^0.21.0"
+    "axios": "^1.20.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
-  "private": true,
-  "description": "Esse projeto é uma referência para iniciar aplicativos com [React Native](https://reactnative.dev/]).",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gih0junho/Listagem_usuarios.git"
+  "devDependencies": {
+    "parcel": "^2.16.4"
   },
-  "keywords": [],
-  "author": "",
+  "type": "module",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Gih0junho/Listagem_usuarios/issues"
-  },
-  "homepage": "https://github.com/Gih0junho/Listagem_usuarios#readme"
+  "main": "index.js",
+  "keywords": [],
+  "author": ""
 }

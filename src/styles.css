@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #fff8ed;
+    background-image: radial-gradient(#f7c948 1.5px, transparent 1.5px), radial-gradient(#ff8066 1.2px, transparent 1.2px);
+    background-position: 0 0, 18px 18px;
+    background-size: 36px 36px;
+    color: #173f4f;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+.app-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+.header {
+    margin-bottom: 28px;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: #fffdf8;
+    border: 2px solid #173f4f;
+    border-radius: 8px;
+    padding: 28px 24px;
+    box-shadow: 8px 8px 0 #ff8066;
+}
+
+.header__eyebrow {
+    color: #e85d4a;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.header__title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 0.95;
+    color: #173f4f;
+}
+
+.header__title::after {
+    content: '18';
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-left: 12px;
+    background: #f7c948;
+    border: 2px solid #173f4f;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    vertical-align: middle;
+    transform: rotate(8deg);
+}
+
+.header__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: min(100%, 320px);
+}
+
+.header__search {
+    width: 100%;
+    border: 2px solid #173f4f;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.header__search:focus {
+    border-color: #e85d4a;
+    box-shadow: 4px 4px 0 #f7c948;
+}
+
+.header__count {
+    font-size: 0.95rem;
+    color: #42616a;
+    font-weight: 600;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 200px;
+    background: #fffdf8;
+    border: 2px solid #173f4f;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.loading__spinner {
+    width: 42px;
+    height: 42px;
+    border: 4px solid #f7c948;
+    border-top-color: #e85d4a;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loading__text {
+    color: #173f4f;
+    font-weight: 600;
+}
+
+.user-list {
+    background: #fffdf8;
+    border: 2px solid #173f4f;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 8px 8px 0 #f7c948;
+}
+
+.user-list__summary,
+.user-list__error,
+.user-list__empty {
+    margin-bottom: 18px;
+    font-size: 1rem;
+    color: #42616a;
+}
+
+.user-list__error {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+.user-list__grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.user-card {
+    background: #e4f3ef;
+    border: 2px solid #173f4f;
+    border-radius: 6px;
+    padding: 18px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 #ff8066;
+}
+
+.user-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-card__name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.15rem;
+    color: #173f4f;
+}
+
+.user-card__username {
+    font-weight: 700;
+    color: #e85d4a;
+}
+
+.user-card__email {
+    font-size: 0.95rem;
+    color: #42616a;
+    word-break: break-word;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 640px) {
+    .app-container {
+        padding: 24px 14px 40px;
+    }
+
+    .header__content,
+    .user-list {
+        padding: 18px 16px;
+    }
+}
