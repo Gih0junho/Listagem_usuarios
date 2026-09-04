@@ -4,8 +4,8 @@
   "private": true,
   "description": "Aplicacao React para listagem de usuarios com Parcel.",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "npm run build && node scripts/serve-dist.mjs",
+    "build": "parcel build --target web --no-cache",
     "test": "echo \"Error: no test specified\""
   },
   "dependencies": {
@@ -17,8 +17,17 @@
     "parcel": "^2.16.4"
   },
   "type": "module",
+  "engines": {
+    "node": ">=20 <24"
+  },
+  "targets": {
+    "web": {
+      "context": "browser",
+      "source": "index.html",
+      "distDir": "dist"
+    }
+  },
   "license": "ISC",
-  "main": "index.js",
   "keywords": [],
   "author": ""
 }
